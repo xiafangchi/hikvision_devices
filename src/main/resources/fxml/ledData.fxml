@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ys.hikvision_device.controller.LedDataController">
+    <children>
+        <TableView fx:id="ledDataTable" layoutX="11.0" layoutY="123.0" prefHeight="251.0" prefWidth="564.0">
+            <columns>
+                <TableColumn fx:id="ledDataCell" prefWidth="75.0" text="序号" />
+                <TableColumn fx:id="ledDataName" prefWidth="135.0" text="名称" />
+                <TableColumn fx:id="ledPageName" prefWidth="134.0" text="节目名称" />
+                <TableColumn fx:id="ledPageTypeName" prefWidth="233.0" text="类型" />
+            </columns>
+        </TableView>
+        <Pane layoutX="26.0" layoutY="36.0" prefHeight="71.0" prefWidth="548.0">
+            <children>
+                <Button fx:id="selectLedData" layoutX="31.0" layoutY="21.0" mnemonicParsing="false" onAction="#selectLedData" prefHeight="30.0" prefWidth="69.0" text="查询">
+                </Button>
+                <Button fx:id="editLedData" layoutX="309.0" layoutY="21.0" mnemonicParsing="false" onAction="#editLedData" prefHeight="30.0" prefWidth="69.0" text="修改" />
+                <Button fx:id="addLedData" layoutX="166.0" layoutY="21.0" mnemonicParsing="false" onAction="#addLedData" prefHeight="30.0" prefWidth="69.0" text="新增" />
+                <Button fx:id="deleteLedData" layoutX="445.0" layoutY="21.0" mnemonicParsing="false" onAction="#deleteLedData" prefHeight="30.0" prefWidth="69.0" text="删除" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

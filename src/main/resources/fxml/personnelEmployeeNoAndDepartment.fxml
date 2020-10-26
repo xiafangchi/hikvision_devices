@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<AnchorPane prefHeight="400.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ys.hikvision_device.controller.PersonnelEmployeeNoAndDepartmentController">
+    <children>
+        <Pane layoutX="32.0" layoutY="37.0" prefHeight="59.0" prefWidth="572.0">
+            <children>
+                <Button fx:id="selectDepartment" layoutX="28.0" layoutY="15.0" mnemonicParsing="false"
+                        onAction="#selectDepartment" prefHeight="30.0" prefWidth="65.0" text="查询"/>
+                <Button fx:id="addDepartment" layoutX="180.0" layoutY="15.0" mnemonicParsing="false"
+                        onAction="#addDepartment" prefHeight="30.0" prefWidth="65.0" text="新增"/>
+                <Button fx:id="editDepartment" layoutX="332.0" layoutY="15.0" mnemonicParsing="false"
+                        onAction="#editDepartment" prefHeight="30.0" prefWidth="65.0" text="修改"/>
+                <Button fx:id="deleteDepartment" layoutX="481.0" layoutY="15.0" mnemonicParsing="false"
+                        onAction="#deleteDepartment" prefHeight="30.0" prefWidth="65.0" text="删除"/>
+            </children>
+        </Pane>
+        <TableView fx:id="departmentTable" layoutX="16.0" layoutY="105.0" prefHeight="274.0" prefWidth="594.0">
+            <columns>
+                <TableColumn fx:id="departmentCell" prefWidth="75.0" text="序号"/>
+                <TableColumn fx:id="employeeNo" prefWidth="245.0" text="工号前缀"/>
+                <TableColumn fx:id="departmentName" prefWidth="279.0" text="名称"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

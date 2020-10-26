@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<AnchorPane prefHeight="412.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ys.hikvision_device.controller.LedPageController">
+    <children>
+        <Pane layoutY="44.0" prefHeight="70.0" prefWidth="741.0">
+            <children>
+                <Button fx:id="savePage" layoutX="259.0" layoutY="20.0" mnemonicParsing="false" onAction="#addLedPage"
+                        prefHeight="30.0" prefWidth="76.0" text="新增"/>
+                <Button fx:id="deletePage" layoutX="557.0" layoutY="20.0" mnemonicParsing="false" onAction="#deletePage"
+                        prefHeight="30.0" prefWidth="76.0" text="删除"/>
+                <Button fx:id="editPage" layoutX="407.0" layoutY="20.0" mnemonicParsing="false" onAction="#editPage"
+                        prefHeight="30.0" prefWidth="76.0" text="修改"/>
+                <Button fx:id="selectPage" layoutX="109.0" layoutY="20.0" mnemonicParsing="false" onAction="#selectPage"
+                        prefHeight="30.0" prefWidth="76.0" text="查询"/>
+            </children>
+        </Pane>
+        <TableView fx:id="pageTable" layoutX="45.0" layoutY="126.0" prefHeight="261.0" prefWidth="647.0">
+            <columns>
+                <TableColumn fx:id="pageCell" prefWidth="75.0" text="序号"/>
+                <TableColumn fx:id="pageName" prefWidth="184.0" text="节目名称"/>
+                <TableColumn fx:id="pageWidth" prefWidth="193.0" text="宽度"/>
+                <TableColumn fx:id="pageHeight" prefWidth="194.0" text="高度"/>
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

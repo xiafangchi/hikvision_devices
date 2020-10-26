@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.ys.hikvision_device.controller.FaceDeviceController"
+            prefHeight="456.0" prefWidth="600.0">
+    <children>
+        <Pane layoutY="20.0" prefHeight="69.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="160.0" layoutY="25.0" text="设备名称"/>
+                <TextField fx:id="editName" layoutX="227.0" layoutY="20.0"/>
+            </children>
+        </Pane>
+        <Pane layoutY="89.0" prefHeight="69.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="169.0" layoutY="25.0" text="设备ip"/>
+                <TextField fx:id="editIp" layoutX="228.0" layoutY="20.0"/>
+            </children>
+        </Pane>
+        <Button fx:id="saveEditDevice" layoutX="163.0" layoutY="388.0" mnemonicParsing="false"
+                onAction="#saveEditDevice"
+                prefHeight="30.0" prefWidth="60.0" text="确认"/>
+        <Button fx:id="cancelEditSave" layoutX="383.0" layoutY="388.0" mnemonicParsing="false"
+                onAction="#cancelEditSave"
+                prefHeight="30.0" prefWidth="60.0" text="取消"/>
+        <Pane layoutY="166.0" prefHeight="69.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="170.0" layoutY="25.0" text="用户名"/>
+                <TextField fx:id="editUserName" layoutX="228.0" layoutY="20.0"/>
+            </children>
+        </Pane>
+        <Pane layoutY="235.0" prefHeight="69.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="160.0" layoutY="25.0" text="登录密码"/>
+                <PasswordField fx:id="editPassword" layoutX="230.0" layoutY="20.0" prefHeight="30.0" prefWidth="201.0"/>
+            </children>
+        </Pane>
+        <Pane layoutY="304.0" prefHeight="69.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="160.0" layoutY="25.0" text="进出方向"/>
+                <ChoiceBox fx:id="editDirection" layoutX="232.0" layoutY="20.0" prefHeight="30.0" prefWidth="201.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="进"/>
+                            <String fx:value="出"/>
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+            </children>
+        </Pane>
+    </children>
+
+</AnchorPane>

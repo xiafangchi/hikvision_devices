@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<AnchorPane prefHeight="367.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ys.hikvision_device.controller.LedPageController">
+
+
+    <children>
+        <Pane layoutX="26.0" layoutY="7.0" prefHeight="351.0" prefWidth="548.0">
+            <children>
+                <Label layoutX="137.0" layoutY="40.0" text="名称"/>
+                <TextField fx:id="addPageName" layoutX="173.0" layoutY="35.0"/>
+                <Label layoutX="137.0" layoutY="90.0" text="高度"/>
+                <TextField fx:id="addPageHeight" layoutX="173.0" layoutY="85.0"/>
+                <TextField fx:id="addPageWidth" layoutX="173.0" layoutY="134.0"/>
+                <Label layoutX="137.0" layoutY="139.0" text="宽度"/>
+                <Button fx:id="saveLedPage" layoutX="131.0" layoutY="289.0" mnemonicParsing="false" prefHeight="30.0"
+                        onAction="#saveLedPage" prefWidth="70.0" text="确认"/>
+                <Button fx:id="cancelLedPage" layoutX="331.0" layoutY="289.0" mnemonicParsing="false" prefHeight="30.0"
+                        onAction="#cancelLedPage" prefWidth="70.0" text="取消"/>
+                <Label layoutX="127.0" layoutY="187.0" text="位置X"/>
+                <TextField fx:id="addPageX" layoutX="173.0" layoutY="182.0"/>
+                <Label layoutX="375.0" layoutY="187.0"/>
+                <Label layoutX="127.0" layoutY="235.0" text="位置Y"/>
+                <TextField fx:id="addPageY" layoutX="173.0" layoutY="230.0"/>
+                <Label layoutX="375.0" layoutY="235.0"/>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

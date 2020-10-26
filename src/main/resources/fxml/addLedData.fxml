@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<AnchorPane prefHeight="474.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ys.hikvision_device.controller.LedDataController">
+    <children>
+        <Pane layoutX="26.0" layoutY="101.0" prefHeight="59.0" prefWidth="549.0">
+            <children>
+                <Label layoutX="315.0" layoutY="20.0" text="展示类型"/>
+                <ChoiceBox fx:id="addLedDataType" layoutX="376.0" layoutY="15.0" prefWidth="150.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="日期时间"/>
+                            <String fx:value="人员车辆信息"/>
+                            <String fx:value="自定义内容"/>
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <Label layoutX="33.0" layoutY="20.0" text="LED节目"/>
+                <ChoiceBox fx:id="addLedDataPage" layoutX="89.0" layoutY="15.0" prefWidth="150.0"/>
+            </children>
+        </Pane>
+        <Pane layoutX="26.0" layoutY="160.0" prefHeight="59.0" prefWidth="549.0">
+            <children>
+                <Label layoutX="313.0" layoutY="23.0" text="停留时间"/>
+                <Label layoutX="58.0" layoutY="23.0" text="字号"/>
+                <TextField fx:id="addLedDataFontSize" layoutX="88.0" layoutY="18.0" prefHeight="30.0"
+                           prefWidth="150.0"/>
+                <TextField fx:id="addLedDataStayTime" layoutX="376.0" layoutY="18.0" prefHeight="30.0"
+                           prefWidth="150.0"/>
+            </children>
+        </Pane>
+        <Pane layoutX="29.0" layoutY="278.0" prefHeight="139.0" prefWidth="549.0">
+            <children>
+                <Label layoutX="58.0" layoutY="23.0" text="内容"/>
+                <TextArea fx:id="addLedDataContent" layoutX="88.0" layoutY="20.0" prefHeight="100.0" prefWidth="437.0"/>
+            </children>
+        </Pane>
+        <Button fx:id="saveLedData" layoutX="181.0" layoutY="421.0" mnemonicParsing="false" onAction="#saveLedData"
+                prefHeight="30.0" prefWidth="71.0" text="确认"/>
+        <Button fx:id="cancelLedData" layoutX="354.0" layoutY="421.0" mnemonicParsing="false" onAction="#cancelLedData"
+                prefHeight="30.0" prefWidth="71.0" text="取消"/>
+        <Pane layoutX="26.0" layoutY="42.0" prefHeight="59.0" prefWidth="549.0">
+            <children>
+                <Label layoutX="58.0" layoutY="23.0" text="名称"/>
+                <TextField fx:id="addLedDataName" layoutX="88.0" layoutY="18.0" prefHeight="30.0" prefWidth="437.0"/>
+            </children>
+        </Pane>
+        <Pane layoutX="26.0" layoutY="219.0" prefHeight="59.0" prefWidth="549.0">
+            <children>
+                <Label layoutX="28.0" layoutY="23.0" text="对齐方式"/>
+                <ChoiceBox fx:id="addPositionName" layoutX="89.0" layoutY="19.0" prefWidth="150.0">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="左对齐"/>
+                            <String fx:value="右对齐"/>
+                            <String fx:value="居中对齐"/>
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="左对齐"/>
+                    </value>
+                </ChoiceBox>
+                <Label layoutX="343.0" layoutY="23.0" text="字体"/>
+                <ChoiceBox fx:id="addFontType" layoutX="379.0" layoutY="19.0" prefWidth="150.0" value="左对齐">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="宋体"/>
+                            <String fx:value="黑体"/>
+                            <String fx:value="仿宋"/>
+                            <String fx:value="楷体"/>
+                            <String fx:value="隶书"/>
+                            <String fx:value="等线"/>
+                            <String fx:value="幼圆"/>
+                            <String fx:value="新宋体"/>
+                            <String fx:value="微软雅黑"/>
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="宋体"/>
+                    </value>
+                </ChoiceBox>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

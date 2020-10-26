@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="733.0" prefWidth="1267.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ys.hikvision_device.controller.HelloworldController">
+    <children>
+        <VBox alignment="CENTER" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+              minWidth="-Infinity" prefHeight="25.0" prefWidth="861.0"/>
+        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1267.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="设备管理">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#faceDevice" text="人脸识别"/>
+                    </items>
+                </Menu>
+
+                <Menu mnemonicParsing="false" text="部门设置">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#personnelEmployeeNoAndDepartment" text="部门设置"/>
+                    </items>
+                </Menu>
+
+                <Menu mnemonicParsing="false" text="LED设置">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#ledPage" text="节目设置"/>
+                    </items>
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#ledData" text="内容设置"/>
+                    </items>
+                </Menu>
+
+
+                <Menu mnemonicParsing="false" text="系统设置">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#config" text="系统设置"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <TableView fx:id="personnelInOutTable" layoutX="122.0" layoutY="465.0" prefHeight="200.0" prefWidth="342.0">
+            <columns>
+                <TableColumn fx:id="personnelType" prefWidth="171.0" text="人员类型"/>
+                <TableColumn fx:id="personnelTableInNum" prefWidth="170.0" text="场内数量"/>
+            </columns>
+        </TableView>
+        <TableView fx:id="carInOutTable" layoutX="122.0" layoutY="126.0" prefHeight="200.0" prefWidth="342.0">
+            <columns>
+                <TableColumn fx:id="carType" prefWidth="172.0" text="车辆类型"/>
+                <TableColumn fx:id="carTypeInNum" prefWidth="169.0" text="场内数量"/>
+            </columns>
+        </TableView>
+        <Label layoutX="218.0" layoutY="60.0" text="车辆进出统计">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="212.0" layoutY="394.0" text="人员进出统计">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="122.0" layoutY="100.0" text="总数量"/>
+        <Label layoutX="340.0" layoutY="100.0" text="场内数量"/>
+        <Label layoutX="122.0" layoutY="440.0" text="总数量"/>
+        <Label layoutX="340.0" layoutY="440.0" text="场内数量"/>
+        <Label fx:id="carTotalNum" layoutX="167.0" layoutY="100.0" prefHeight="20.0" prefWidth="60.0" textFill="RED"/>
+        <Label fx:id="carInNum" layoutX="401.0" layoutY="100.0" prefHeight="20.0" prefWidth="60.0" textFill="RED"/>
+        <Label fx:id="personnelTotalNum" layoutX="167.0" layoutY="440.0" prefHeight="20.0" prefWidth="60.0"
+               textFill="RED"/>
+        <Label fx:id="personnelInNum" layoutX="401.0" layoutY="440.0" prefHeight="20.0" prefWidth="60.0"
+               textFill="RED"/>
+        <Label layoutX="847.0" layoutY="60.0" text="车辆进出记录">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+        <Label layoutX="847.0" layoutY="394.0" text="人员进出记录">
+            <font>
+                <Font size="24.0"/>
+            </font>
+        </Label>
+        <TableView fx:id="carInOutDetailTable" layoutX="567.0" layoutY="126.0" prefHeight="200.0" prefWidth="630.0">
+            <columns>
+                <TableColumn fx:id="carNo" prefWidth="75.0" text="序号"/>
+                <TableColumn fx:id="carNumber" prefWidth="197.0" text="车牌"/>
+                <TableColumn fx:id="carInOut" minWidth="0.0" prefWidth="138.0" text="进/出场"/>
+                <TableColumn fx:id="carInOutTime" prefWidth="219.0" text="时间"/>
+            </columns>
+        </TableView>
+        <TableView fx:id="personnelInOutDetailTable" layoutX="567.0" layoutY="465.0" prefHeight="200.0"
+                   prefWidth="630.0">
+            <columns>
+                <TableColumn fx:id="personnelNo" prefWidth="75.0" text="序号"/>
+                <TableColumn fx:id="employeeNo" prefWidth="128.0" text="工号"/>
+                <TableColumn fx:id="department" minWidth="0.0" prefWidth="140.0" text="部门"/>
+                <TableColumn fx:id="personnelInOut" prefWidth="102.0" text="进/出场"/>
+                <TableColumn fx:id="personnelTime" prefWidth="191.0" text="时间"/>
+            </columns>
+        </TableView>
+
+        <Button fx:id="personnelLast" layoutX="1033.0" layoutY="675.0" mnemonicParsing="false"
+                onAction="#personnelLastPage" text="上一页"/>
+        <Button fx:id="personnelNext" layoutX="1112.0" layoutY="675.0" mnemonicParsing="false"
+                onAction="#personnelNextPage" text="下一页"/>
+        <Label fx:id="carPage" layoutX="589.0" layoutY="336.0" prefHeight="20.0" prefWidth="102.0"/>
+        <Label fx:id="carTotalPage" layoutX="712.0" layoutY="336.0" prefHeight="20.0" prefWidth="65.0"/>
+        <Label fx:id="personnelPage" layoutX="589.0" layoutY="675.0" prefHeight="20.0" prefWidth="102.0"
+               style="-fx-font-family: Microsoft YaHei;"/>
+        <Label fx:id="personnelTotalPage" layoutX="712.0" layoutY="675.0" prefHeight="20.0" prefWidth="65.0"/>
+        <Label fx:id="titleTips" layoutX="14.0" layoutY="34.0" prefHeight="20.0" prefWidth="1245.0"
+               style="-fx-alignment: center;" textFill="RED"/>
+    </children>
+</AnchorPane>
